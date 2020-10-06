@@ -13,17 +13,22 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 const client = new ApolloClient({
-    uri: 'https://api.github.com/graphql',
-    headers: {
-      authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
-    },
-  });
+  uri: 'https://api.github.com/graphql',
+  headers: {
+    authorization: `Bearer ${
+      process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN
+    }`,
+  },
+});
 
-ReactDOM.render(<ApolloProvider client={client}>
+ReactDOM.render(
+  <ApolloProvider client={client}>
     <Router>
       <App />
     </Router>
-  </ApolloProvider>, document.getElementById('root'));
+  </ApolloProvider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

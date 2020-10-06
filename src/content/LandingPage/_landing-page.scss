@@ -1,8 +1,11 @@
 @import './mixins.scss';
 @import './overrides.scss';
+@import '@carbon/type/scss/styles';
 
 .landing-page__illo {
-  max-width: 100%;
+  max-width: 80%;
+  margin-left: 50%;
+  float: both;
 }
 .landing-page__banner {
   padding-top: 16px;
@@ -24,10 +27,11 @@
   @include carbon--font-weight('semibold');
 }
 .landing-page__r3 {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   @include landing-page-background;
 }
 .landing-page__label {
   @include carbon--type-style('heading-01');
+  padding-right: 96px;
 }
